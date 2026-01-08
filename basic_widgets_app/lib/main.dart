@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -13,9 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode: .dark,
+      themeMode: .light,
       home: Scaffold(
-        backgroundColor: Colors.white ,
+        backgroundColor: Colors.white,
         body: SafeArea(child: Center(child: ProfileCard())),
       ),
     );
@@ -70,7 +69,6 @@ class ProfileCard extends StatelessWidget {
                 topRight: .circular(30),
                 topLeft: .circular(30),
               ),
-
             ),
             height: 100,
             width: double.infinity,
@@ -93,7 +91,7 @@ class ProfileCard extends StatelessWidget {
                   'F A Z A L',
                   style: TextStyle(
                     fontSize: 26,
-                    color: Colors.grey.shade700,
+                    color: Colors.deepPurple,
                     fontWeight: .w500,
                   ),
                 ),
@@ -105,25 +103,63 @@ class ProfileCard extends StatelessWidget {
                     fontWeight: .w500,
                   ),
                 ),
+                SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconButton(
-                      icon: FaIcon(FontAwesomeIcons.facebook,size: 40,),
+                      icon: FaIcon(FontAwesomeIcons.facebook, size: 30),
                       onPressed: () {
                         print('Facebook clicked');
                       },
                       color: Colors.blue,
                     ),
                     IconButton(
-                      icon: FaIcon(FontAwesomeIcons.twitter,size: 40,),
+                      icon: FaIcon(FontAwesomeIcons.twitter, size: 30),
                       onPressed: () {},
                       color: Colors.lightBlue,
                     ),
                     IconButton(
-                      icon: FaIcon(FontAwesomeIcons.instagram,size: 40,),
+                      icon: FaIcon(FontAwesomeIcons.instagram, size: 30),
                       onPressed: () {},
                       color: Colors.pink,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: .center,
+                  children: [
+                    ElevatedButton(
+                      style: ButtonStyle(elevation: WidgetStatePropertyAll(10)),
+                      onPressed: () {},
+                      child: Text('Follow'),
+                    ),
+                    SizedBox(width: 20),
+                    ElevatedButton(
+                      style: ButtonStyle(elevation: WidgetStatePropertyAll(10)),
+                      onPressed: () {},
+                      child: Text('Message'),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: .center,
+                  children: [
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: Text('64.2k'),
+                      icon: Icon(FontAwesomeIcons.heart),
+                    ),
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: Text('2.6k'),
+                      icon: Icon(FontAwesomeIcons.comment),
+                    ),
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: Text('10k'),
+                      icon: Icon(FontAwesomeIcons.share),
                     ),
                   ],
                 ),
