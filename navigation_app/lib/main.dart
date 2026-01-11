@@ -15,7 +15,7 @@ class NavigationApp extends StatefulWidget {
 }
 
 class _NavigationAppState extends State<NavigationApp> {
-  List<Widget> screens = [Homescreen(), Settingscreen(), Profilescreen()];
+  List<Widget> screens = [Homescreen(), Settingscreen(), Profilescreen(name: 'fa',)];
   int index = 0;
 
   @override
@@ -24,6 +24,12 @@ class _NavigationAppState extends State<NavigationApp> {
       debugShowCheckedModeBanner: false,
       theme: .dark(),
       themeMode: .dark,
+      routes: {
+        '/home': (context) => Homescreen(),
+        '/Setting': (_) => Settingscreen(),
+
+      },
+
       home: Scaffold(
         body: screens[index],
         bottomNavigationBar: BottomNavigationBar(

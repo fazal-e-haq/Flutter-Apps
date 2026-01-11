@@ -5,8 +5,11 @@ class Settingscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Center(
-      child: Text('Setting',style: Theme.of(context).textTheme.headlineLarge,),
+    return Center(
+      child: Text(
+        'S\n  e\n    t\n      t\n        i\n          n\n            g',
+        style: Theme.of(context).textTheme.headlineLarge,
+      ),
     );
   }
 }
