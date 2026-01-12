@@ -4,19 +4,25 @@ import 'package:navigation_app/ProfileScreen.dart';
 import 'package:navigation_app/SettingScreen.dart';
 
 void main() {
-  runApp(const NavigationApp());
+  runApp(NavigationApp());
 }
 
 class NavigationApp extends StatefulWidget {
-  const NavigationApp({super.key});
-
+  NavigationApp({super.key, this.username});
+  String? username;
   @override
   State<NavigationApp> createState() => _NavigationAppState();
 }
 
 class _NavigationAppState extends State<NavigationApp> {
-  List<Widget> screens = [Homescreen(), Settingscreen(), Profilescreen(name: 'fa',)];
+  late List<Widget> screens = [
+    Homescreen(),
+    Settingscreen(),
+    Profilescreen(name: userName.toString()),
+  ];
   int index = 0;
+
+  String? get userName => widget.username;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +33,6 @@ class _NavigationAppState extends State<NavigationApp> {
       routes: {
         '/home': (context) => Homescreen(),
         '/Setting': (_) => Settingscreen(),
-
       },
 
       home: Scaffold(

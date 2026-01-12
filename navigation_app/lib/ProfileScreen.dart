@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Profilescreen extends StatefulWidget {
-  Profilescreen({super.key,required name});
-
+  Profilescreen({super.key,this.name});
+  String? name;
   @override
   State<Profilescreen> createState() => _ProfilescreenState();
 }
@@ -11,7 +11,7 @@ class _ProfilescreenState extends State<Profilescreen> {
 
   @override
   Widget build(BuildContext context) {
-     String? name;
+
 
     return SafeArea(
         child: Padding(
@@ -25,7 +25,7 @@ class _ProfilescreenState extends State<Profilescreen> {
                 ),
                 SizedBox(height: 400),
                 Text(
-                  'Name  :  $name',
+                  'Name  :  ${widget.name}',
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
               ],

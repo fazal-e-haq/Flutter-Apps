@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_app/ProfileScreen.dart';
+import 'package:navigation_app/main.dart';
 
 class Homescreen extends StatefulWidget {
   Homescreen({super.key});
@@ -34,7 +35,7 @@ class _HomescreenState extends State<Homescreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => Profilescreen(name: nameController.text.toString()),
+                    builder: (_) => NavigationApp(username: nameController.text.toString()),
                   ),
                 );
 
