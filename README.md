@@ -1,6 +1,6 @@
 # Flutter-Apps
 
-A collection of small Flutter applications demonstrating fundamental concepts of Flutter development, including widgets, state management, navigation, and basic CRUD operations. These projects are ideal for beginners to intermediate Flutter developers who want hands-on practice.
+A collection of small Flutter applications demonstrating fundamental concepts of Flutter development, including widgets, state management, navigation. These projects are ideal for beginners to intermediate Flutter developers who want hands-on practice.
 
 ---
 
@@ -22,8 +22,7 @@ A collection of small Flutter applications demonstrating fundamental concepts of
 - Demonstrates core Flutter concepts:
   - Widgets and Layouts
   - State Management (`setState`)
-  - Navigation and Routing
-  - ListView & Basic CRUD functionality
+  - Navigation and Routing
 - Ready to run on both **Android** and **iOS**
 
 ---
