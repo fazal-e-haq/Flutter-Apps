@@ -28,12 +28,8 @@ A collection of small Flutter applications demonstrating fundamental concepts of
 
 ---
 
-## Getting Started
 
-1. Clone this repository:
 
-```bash
-git clone https://github.com/fazal-e-haq/Flutter-Apps.git
 
 
 
